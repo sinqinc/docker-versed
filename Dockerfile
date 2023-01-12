@@ -13,9 +13,8 @@ RUN java --version
 WORKDIR /usr/src/app
 
 COPY package.json .
-COPY package-lock.json .
 
-RUN npm install && npm audit fix --force
+RUN npm install --force
 
 COPY . .
 
